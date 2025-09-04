@@ -1,0 +1,49 @@
+name: 📩 Support Ticket
+description: Submit a support request, bug, or feature inquiry.
+title: "[Ticket]: "
+labels: ["support"]
+assignees:
+  johnmarkparangan21-tech  # Replace with your GitHub username
+body:
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Info
+      description: Optional. Leave your email or username if you'd like us to follow up.
+      placeholder: e.g., your@email.com
+    validations:
+      required: false
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Type of Request
+      options:
+        - Technical Issue
+        - Bug Report
+        - Feature Request
+        - Account or Billing Question
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe Your Issue
+      description: Provide as much detail as possible.
+      placeholder: What happened? What do you need help with?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority Level
+      options:
+        - Low
+        - Medium
+        - High
+        - Urgent
+    validations:
+      required: true
