@@ -1,0 +1,67 @@
+name: 🛠️ Support Ticket
+description: Submit a support request for computer lab issues.
+title: "[Ticket] "
+labels: ["student"]
+assignees:
+  johnmarkparangan21-tech  # Replace with your GitHub username
+
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Name
+      description: Enter your full name
+      placeholder: e.g., Juan Dela Cruz
+    validations:
+      required: true
+
+  - type: input
+    id: ctu_id
+    attributes:
+      label: CTU ID Number
+      description: Student ID number
+      placeholder: e.g., 2025123456
+    validations:
+      required: true
+
+  - type: input
+    id: computer_tag
+    attributes:
+      label: Computer Tag Number
+      description: The number/tag of the affected computer
+      placeholder: e.g., M- 1022 0 042
+    validations:
+      required: true
+
+  - type: dropdown
+    id: issue_type
+    attributes:
+      label: Issue Type
+      options:
+        - Bug Issue
+        - Log In Issues
+        - Hardware Problems
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority Level
+      options:
+        - Urgent
+        - High
+        - Medium
+        - Low
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Provide as much detail as possible about the issue.
+      placeholder: What happened? When did it start? Any error messages?
+    validations:
+      required: true
